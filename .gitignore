@@ -1,0 +1,7 @@
+# for librarian-puppet
+.tmp/
+.librarian/
+modules/
+
+# for Vagrant
+.vagrant/

@@ -1,7 +1,7 @@
-vagrant-puppet-dev
-==================
+vagrant-foreman
+===============
 
-Boilerplate for getting started with Vagrant and Puppet.
+[The Foreman](https://github.com/theforeman/foreman) on a Vagrant box.
 
 Setup
 -----
@@ -11,6 +11,12 @@ Setup
   - Set the boxname you chose above in the `Vagrantfile`.
   - Use [librarian-puppet](https://github.com/rodjek/librarian-puppet) or [r10k](https://github.com/adrienthebo/r10k) to process your `Puppetfile`.
   - `vagrant up`
+
+
+Caveats
+-------
+
+  - Debian only, for now.
 
 License
 -------

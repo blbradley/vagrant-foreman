@@ -1,5 +1,4 @@
 class { 'apt':
-  always_apt_update => true,
 }
 
 apt::key { 'foreman':
@@ -11,9 +10,11 @@ apt::source { 'foreman':
   release     => 'wheezy',
   repos       => '1.4',
   include_src => false,
-}->
+}
+
 package { 'foreman-installer':
   ensure => present,
+  require => Class['apt::update'],
 }~>
 exec { 'foreman-installer':
   path        => [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/' ],
